@@ -26,7 +26,6 @@ extlinks = {
     "pr": ("https://github.com/AidanJohnston/rasal/pull/%s", "PR #"),
 }
 html_theme = "furo"
-html_theme_path = [furo.get_html_theme_path()]
 html_theme_options = {
     "githuburl": "https://github.com/AidanJohnston/rasal/",
 }
