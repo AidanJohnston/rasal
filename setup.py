@@ -2,6 +2,7 @@
 import re
 from pathlib import Path
 
+from pybind11.setup_helpers import Pybind11Extension, build_ext
 from setuptools import find_packages
 from setuptools import setup
 
@@ -10,10 +11,30 @@ def read(*names, **kwargs):
     with Path(__file__).parent.joinpath(*names).open(encoding=kwargs.get("encoding", "utf8")) as fh:
         return fh.read()
 
+__name__  = "rasal"
+__version__ = "0.0.1"
+
+# The main interface is through Pybind11Extension.
+# * You can add cxx_std=11/14/17, and then build_ext can be removed.
+# * You can set include_pybind11=false to add the include directory yourself,
+#   say from a submodule.
+#
+# Note:
+#   Sort input source files if you glob sources to ensure bit-for-bit
+#   reproducible builds (https://github.com/pybind/python_example/pull/53)
+
+ext_modules = [
+    Pybind11Extension(
+        __name__,
+        ["src/rasal/rasal.cpp"],
+        # Example: passing in the version to the compiled code
+        define_macros=[("VERSION_INFO", __version__)],
+    ),
+]
 
 setup(
-    name="rasal",
-    version="0.0.0",
+    name=__name__,
+    version=__version__,
     license="MIT",
     description="Resolution and Sensors and Lens.",
     long_description="{}\n{}".format(
@@ -23,10 +44,11 @@ setup(
     author="Aidan Johnston",
     author_email="contact@aidanjohnston.ca",
     url="https://github.com/AidanJohnston/rasal",
-    packages=find_packages("src"),
-    package_dir={"": "src"},
-    py_modules=[path.stem for path in Path("src").glob("*.py")],
+    # py_modules=[path.stem for path in Path("src").glob("*.py")],
     include_package_data=True,
+    ext_modules=ext_modules,
+    # Currently, build_ext only provides an optional "highest supported C++
+    # level" feature, but in the future it may provide more features.
     zip_safe=False,
     classifiers=[
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -65,10 +87,5 @@ setup(
         # eg:
         #   "rst": ["docutils>=0.11"],
         #   ":python_version=="2.6"": ["argparse"],
-    },
-    entry_points={
-        "console_scripts": [
-            "rasal = rasal.cli:main",
-        ]
     },
 )

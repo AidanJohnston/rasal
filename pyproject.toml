@@ -1,7 +1,13 @@
 [build-system]
 requires = [
-    "setuptools>=30.3.0",
+    "setuptools>=42",
+    "pybind11>=2.10.0",
 ]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+test-command = "python {project}/tests/test.py"
+test-skip = "*universal2:arm64"
 
 [tool.ruff.per-file-ignores]
 "ci/*" = ["S"]
