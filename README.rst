@@ -59,4 +59,4 @@ To run all the tests run::
 License
 =======
 
-Rasal in wlkpy is under the MIT license. See the LICENSE file for more information.
+Rasal is under the MIT license. See the LICENSE file for more information.
