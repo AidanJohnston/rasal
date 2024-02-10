@@ -1,0 +1,16 @@
+#ifndef RASAL_FILMBACK_H
+#define RASAL_FILMBACK_H
+
+#include "rasal.h"
+
+
+RASAL_NAMESPACE_OPEN_SCOPE
+
+class Filmback {
+
+};
+
+RASAL_NAMESPACE_CLOSE_SCOPE
+
+
+#endif // RASAL_FILMBACK_H
