@@ -8,7 +8,8 @@ Sensor::Sensor (int width, int height) {
     height = height;
 }
 
-Sensor::get_aspect_raito() {
+float
+Sensor::get_aspect_ratio() {
     float ratio = width / height;
     return ratio;
 }

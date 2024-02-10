@@ -2,12 +2,19 @@
 requires = [
     "setuptools>=42",
     "pybind11>=2.10.0",
+    "wheel",
+    "cmake>=3.12",
 ]
+
 build-backend = "setuptools.build_meta"
 
 [tool.cibuildwheel]
-test-command = "python {project}/tests/test.py"
-test-skip = "*universal2:arm64"
+test-command = "pytest {project}/tests"
+test-extras = ["test"]
+test-skip = ["*universal2:arm64"]
+# Setuptools bug causes collision between pypy and cpython artifacts
+before-build = "rm -rf {project}/build"
+
 
 [tool.ruff.per-file-ignores]
 "ci/*" = ["S"]
@@ -18,7 +25,6 @@ ignore = [
     "RUF001", # ruff-specific rules ambiguous-unicode-character-string
     "S101", # flake8-bandit assert
     "S308", # flake8-bandit suspicious-mark-safe-usage
-    "E501", # pycodestyle line-too-long
 ]
 line-length = 79
 select = [
@@ -54,5 +60,5 @@ forced-separate = ["conftest"]
 force-single-line = true
 
 [tool.black]
-line-length = 140
+line-length = 79
 target-version = ["py38"]

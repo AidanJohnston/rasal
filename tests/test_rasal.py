@@ -1,6 +1,6 @@
 
-from rasal.cli import main
+import rasal
 
 
-def test_main():
-    main([])
+def test_rasal():
+    assert rasal.add(1, 1) == 2

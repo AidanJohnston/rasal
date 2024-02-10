@@ -3,12 +3,12 @@
 
 #include "rasal.h"
 
-
 RASAL_NAMESPACE_OPEN_SCOPE
 
 class Filmback {
 
 };
+
 
 RASAL_NAMESPACE_CLOSE_SCOPE
 
