@@ -1,59 +1,34 @@
-========
-Overview
-========
-
-.. start-badges
-
-.. list-table::
-    :stub-columns: 1
-
-    * - docs
-      - |docs|
-    * - tests
-      - | |github-actions|
-        | |codecov|
-    * - package
-      - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
-.. |docs| image:: https://readthedocs.org/projects/rasal/badge/?style=flat
-    :target: https://rasal.readthedocs.io/
-    :alt: Documentation Status
-
-.. |github-actions| image:: https://github.com/AidanJohnston/rasal/actions/workflows/github-actions.yml/badge.svg
-    :alt: GitHub Actions Build Status
-    :target: https://github.com/AidanJohnston/rasal/actions
-
-.. |codecov| image:: https://codecov.io/gh/AidanJohnston/rasal/branch/main/graphs/badge.svg?branch=main
-    :alt: Coverage Status
-    :target: https://app.codecov.io/github/AidanJohnston/rasal
-
-.. |version| image:: https://img.shields.io/pypi/v/rasal.svg
-    :alt: PyPI Package latest release
-    :target: https://pypi.org/project/rasal
-
-.. |wheel| image:: https://img.shields.io/pypi/wheel/rasal.svg
-    :alt: PyPI Wheel
-    :target: https://pypi.org/project/rasal
-
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/rasal.svg
-    :alt: Supported versions
-    :target: https://pypi.org/project/rasal
-
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/rasal.svg
-    :alt: Supported implementations
-    :target: https://pypi.org/project/rasal
-
-.. |commits-since| image:: https://img.shields.io/github/commits-since/AidanJohnston/rasal/v0.0.0.svg
-    :alt: Commits since latest release
-    :target: https://github.com/AidanJohnston/rasal/compare/v0.0.0...main
-
-
-
-.. end-badges
+=====
+RASAL
+=====
 
 Resolution and Sensors and Lens.
 
-* Free software: MIT license
+.. class:: center
+
+    .. image:: https://readthedocs.org/projects/rasal/badge/?version=latest&style=flat-square
+        :target: https://rasal.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+    .. image:: https://img.shields.io/pypi/v/rasal.svg?style=flat-square
+        :alt: PyPI Package latest release
+        :target: https://pypi.org/project/rasal
+
+    .. image:: https://img.shields.io/pypi/dm/rasal?style=flat-square
+        :alt: PyPi Package Downloads
+        :target: https://pypi.org/project/rasal
+    
+    .. image:: https://img.shields.io/pypi/wheel/rasal.svg?style=flat-square
+        :alt: PyPI Wheel
+        :target: https://pypi.org/project/rasal
+
+    .. image:: https://img.shields.io/pypi/pyversions/rasal.svg?style=flat-square
+        :alt: Supported versions
+        :target: https://pypi.org/project/rasal
+
+    .. image:: https://img.shields.io/pypi/implementation/rasal.svg?style=flat-square
+        :alt: Supported implementations
+        :target: https://pypi.org/project/rasal
 
 Installation
 ============
@@ -81,19 +56,7 @@ To run all the tests run::
 
     tox
 
-Note, to combine the coverage data from all the tox environments run:
+License
+=======
 
-.. list-table::
-    :widths: 10 90
-    :stub-columns: 1
-
-    - - Windows
-      - ::
-
-            set PYTEST_ADDOPTS=--cov-append
-            tox
-
-    - - Other
-      - ::
-
-            PYTEST_ADDOPTS=--cov-append tox
+Rasal is under the MIT license. See the LICENSE file for more information.
