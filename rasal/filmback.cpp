@@ -1,5 +1,5 @@
-#include "filmback.h"
-#include "rasal.h"
+#include "filmback.hpp"
+#include "rasal.hpp"
 
 
 RASAL_NAMESPACE_OPEN_SCOPE
@@ -7,11 +7,11 @@ RASAL_NAMESPACE_OPEN_SCOPE
 Filmback::Filmback()
 {
 
-}
+};
 
 Filmback::~Filmback()
 {
 
-}
+};
 
 RASAL_NAMESPACE_CLOSE_SCOPE
