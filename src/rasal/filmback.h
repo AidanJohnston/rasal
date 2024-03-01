@@ -1,7 +1,7 @@
-#ifndef RASAL_FILMBACK_HPP_
-#define RASAL_FILMBACK_HPP_
+#ifndef RASAL_FILMBACK_H_
+#define RASAL_FILMBACK_H_
 
-#include "rasal.hpp"
+#include "rasal.h"
 
 RASAL_NAMESPACE_OPEN_SCOPE
 
@@ -15,4 +15,4 @@ class Filmback {
 RASAL_NAMESPACE_CLOSE_SCOPE
 
 
-#endif // RASAL_FILMBACK_HPP_
+#endif // RASAL_FILMBACK_H_

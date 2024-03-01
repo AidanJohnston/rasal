@@ -1,7 +1,7 @@
-#ifndef RASAL_RESOLUTION_HPP_
-#define RASAL_RESOLUTION_HPP_
+#ifndef RASAL_RESOLUTION_H_
+#define RASAL_RESOLUTION_H_
 
-#include "rasal.hpp"
+#include "rasal.h"
 
 RASAL_NAMESPACE_OPEN_SCOPE
 
@@ -12,4 +12,4 @@ class Resolution {
 
 RASAL_NAMESPACE_CLOSE_SCOPE
 
-#endif // RASAL_RESOLUTION_HPP_
+#endif // RASAL_RESOLUTION_H_

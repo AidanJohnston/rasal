@@ -1,5 +1,5 @@
-#include "rasal.hpp"
-#include "resolution.hpp"
+#include "rasal.h"
+#include "resolution.h"
 
 RASAL_NAMESPACE_OPEN_SCOPE
 
