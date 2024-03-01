@@ -3,13 +3,11 @@ import os
 import re
 import subprocess
 import sys
-import logging
 from pathlib import Path
 
-from setuptools import Extension, setup
-from setuptools.command.build_ext import build_ext
-
-from pybind11.setup_helpers import Pybind11Extension, build_ext
+from pybind11.setup_helpers import build_ext
+from setuptools import Extension
+from setuptools import setup
 
 
 def read(*names, **kwargs):
@@ -107,11 +105,11 @@ class CMakeBuild(build_ext):
         else:
             # Single config generators are handled "normally"
             single_config = any(
-                x in cmake_generator for x in {"NMake", "Ninja"}
+                x in cmake_generator for x in ("NMake", "Ninja")
             )
 
             # CMake allows an arch-in-generator style for backward compatibility
-            contains_arch = any(x in cmake_generator for x in {"ARM", "Win64"})
+            contains_arch = any(x in cmake_generator for x in ("ARM", "Win64"))
 
             # Specify the arch if using MSVC generator, but only if it doesn't
             # contain a backward-compatibility arch spec already in the
@@ -173,7 +171,6 @@ setup(
     author="Aidan Johnston",
     author_email="contact@aidanjohnston.ca",
     url="https://github.com/AidanJohnston/rasal",
-    # py_modules=[path.stem for path in Path("src").glob("*.py")],
     include_package_data=True,
     ext_modules=ext_modules,
     cmdclass={"build_ext": CMakeBuild},
@@ -195,27 +192,23 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
-        # uncomment if you test on these interpreters:
-        # "Programming Language :: Python :: Implementation :: IronPython",
-        # "Programming Language :: Python :: Implementation :: Jython",
-        # "Programming Language :: Python :: Implementation :: Stackless",
         "Topic :: Utilities",
     ],
     project_urls={
-        "Documentation": "https://rasal.readthedocs.io/",
+        "Documentation": "https://rasal.readthedocs.io/en/latest",
         "Changelog": "https://rasal.readthedocs.io/en/latest/changelog.html",
         "Issue Tracker": "https://github.com/AidanJohnston/rasal/issues",
     },
     keywords=[
-        # eg: "keyword1", "keyword2", "keyword3",
+        "resolution", "sensor" "lens",
     ],
     python_requires=">=3.8",
     install_requires=[
         # eg: "aspectlib==1.1.1", "six>=1.7",
     ],
     extras_require={
-        # eg:
-        #   "rst": ["docutils>=0.11"],
-        #   ":python_version=="2.6"": ["argparse"],
+        "test": [
+            "coverage",
+        ]
     },
 )

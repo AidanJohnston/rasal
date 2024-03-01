@@ -16,11 +16,11 @@ test-skip = ["*universal2:arm64"]
 before-build = "rm -rf {project}/build"
 
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "ci/*" = ["S"]
 
 [tool.ruff]
-extend-exclude = ["static", "ci/templates"]
+extend-exclude = ["static", "ci/templates", "extern"]
 ignore = [
     "RUF001", # ruff-specific rules ambiguous-unicode-character-string
     "S101", # flake8-bandit assert
@@ -51,11 +51,11 @@ select = [
 src = ["src", "tests"]
 target-version = "py38"
 
-[tool.ruff.flake8-pytest-style]
+[tool.ruff.lint.flake8-pytest-style]
 fixture-parentheses = false
 mark-parentheses = false
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 forced-separate = ["conftest"]
 force-single-line = true
 
