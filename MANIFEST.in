@@ -2,14 +2,13 @@ graft docs
 graft src
 graft ci
 graft tests
-graft extern
 
 include .bumpversion.cfg
 include CMakeLists.txt
 include .editorconfig
 include .github/workflows/github-actions.yml
 include .pre-commit-config.yaml
-include .readthedocs.yml
+include .readthedocs.yaml
 include pytest.ini
 include tox.ini
 

@@ -208,7 +208,6 @@ setup(
     ],
     extras_require={
         "test": [
-            "coverage",
         ]
     },
 )
