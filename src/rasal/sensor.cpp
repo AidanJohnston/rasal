@@ -1,4 +1,4 @@
-#include "sensor.hpp"
+#include "sensor.h"
 
 RASAL_NAMESPACE_OPEN_SCOPE
 

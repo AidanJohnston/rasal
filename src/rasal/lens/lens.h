@@ -1,7 +1,7 @@
-#ifndef RASAL_LENS_HPP_
-#define RASAL_LENS_HPP_
+#ifndef RASAL_LENS_H_
+#define RASAL_LENS_H_
 
-#include "rasal.hpp"
+#include "rasal.h"
 
 RASAL_NAMESPACE_OPEN_SCOPE
 
@@ -14,4 +14,4 @@ class Lens {
 
 RASAL_NAMESPACE_CLOSE_SCOPE
 
-#endif // RASAl_LENS_HPP_
+#endif // RASAl_LENS_H_

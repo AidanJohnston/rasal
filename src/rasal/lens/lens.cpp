@@ -1,5 +1,5 @@
-#include "rasal.hpp"
-#include "lens.hpp"
+#include "rasal.h"
+#include "lens.h"
 
 RASAL_NAMESPACE_OPEN_SCOPE
 

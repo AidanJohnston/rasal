@@ -1,4 +1,3 @@
-import furo
 
 extensions = [
     "sphinx.ext.autodoc",

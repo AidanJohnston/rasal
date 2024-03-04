@@ -2,9 +2,9 @@
 
 #include <string>
 
-#include "rasal.hpp"
-#include "resolution.hpp"
-#include "sensor.hpp"
+#include "rasal.h"
+#include "resolution.h"
+#include "sensor.h"
 
 #define STRINGIFY(x) #x
 #define MACRO_STRINGIFY(x) STRINGIFY(x)
@@ -13,15 +13,6 @@ RASAL_NAMESPACE_OPEN_SCOPE
 
 Rasal::Rasal() {}
 
-Rasal
-Rasal::BuildFromFile() {
-    return Rasal();
-}
-
-Rasal
-Rasal::BuildFromDict() {
-    return Rasal();
-}
 
 std::string
 Rasal::Save(std::string) {
@@ -37,13 +28,6 @@ PYBIND11_MODULE(rasal, m) {
         | | \ \  / ____ \ ____) / ____ \| |____ 
         |_|  \_\/_/    \_\_____/_/    \_\______|
     )pbdoc";
-
-    pybind11::class_<Rasal>(m, "Rasal")
-        .def_static(
-            "build_from_file",
-            &Rasal::BuildFromFile,
-            R"pbdoc(Build a rasal from a file.)pbdoc"
-        );
 
     pybind11::class_<Resolution>(m, "Resolution")
         .def(
