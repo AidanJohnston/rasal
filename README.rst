@@ -2,33 +2,36 @@
 RASAL
 =====
 
+
 Resolution and Sensors and Lens.
 
-.. class:: center
+.. start-badges
 
-    .. image:: https://readthedocs.org/projects/rasal/badge/?version=latest&style=flat-square
-        :target: https://rasal.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
+.. image:: https://readthedocs.org/projects/rasal/badge/?version=latest&style=flat-square
+    :target: https://rasal.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
-    .. image:: https://img.shields.io/pypi/v/rasal.svg?style=flat-square
-        :alt: PyPI Package latest release
-        :target: https://pypi.org/project/rasal
+.. image:: https://img.shields.io/pypi/v/rasal.svg?style=flat-square
+    :alt: PyPI Package latest release
+    :target: https://pypi.org/project/rasal
 
-    .. image:: https://img.shields.io/pypi/dm/rasal?style=flat-square
-        :alt: PyPi Package Downloads
-        :target: https://pypi.org/project/rasal
-    
-    .. image:: https://img.shields.io/pypi/wheel/rasal.svg?style=flat-square
-        :alt: PyPI Wheel
-        :target: https://pypi.org/project/rasal
+.. image:: https://img.shields.io/pypi/dm/rasal?style=flat-square
+    :alt: PyPi Package Downloads
+    :target: https://pypi.org/project/rasal
 
-    .. image:: https://img.shields.io/pypi/pyversions/rasal.svg?style=flat-square
-        :alt: Supported versions
-        :target: https://pypi.org/project/rasal
+.. image:: https://img.shields.io/pypi/wheel/rasal.svg?style=flat-square
+    :alt: PyPI Wheel
+    :target: https://pypi.org/project/rasal
 
-    .. image:: https://img.shields.io/pypi/implementation/rasal.svg?style=flat-square
-        :alt: Supported implementations
-        :target: https://pypi.org/project/rasal
+.. image:: https://img.shields.io/pypi/pyversions/rasal.svg?style=flat-square
+    :alt: Supported versions
+    :target: https://pypi.org/project/rasal
+
+.. image:: https://img.shields.io/pypi/implementation/rasal.svg?style=flat-square
+    :alt: Supported implementations
+    :target: https://pypi.org/project/rasal
+
+.. end-badges
 
 Installation
 ============
