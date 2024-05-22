@@ -1,13 +1,8 @@
 #!/usr/bin/env python
-import os
 import re
-import subprocess
-import sys
 from pathlib import Path
 
-from pybind11.setup_helpers import build_ext
-from setuptools import Extension
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 def read(*names, **kwargs):
@@ -24,6 +19,8 @@ __version__ = "0.0.0"
 setup(
     name=__name__,
     version=__version__,
+    package_dir={'': 'src'},
+    packages=find_packages(where='src'),
     license="MIT",
     description="Resolution and Sensors and Lens.",
     long_description="{}\n{}".format(
